@@ -1,13 +1,23 @@
-import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.SUPABASE_URL || "";
-const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || "";
+import {
+  createClient,
+  Session,
+  User,
+  SupabaseClient,
+  SupabaseClientOptions,
+} from "@supabase/supabase-js";
+import { config, isSupabaseConfigured } from "@/lib/config";
 
-export const supabase =
-  supabaseUrl && supabaseAnonKey
-    ? createClient(supabaseUrl, supabaseAnonKey)
-    : null;
+const { supabase: supabaseConfig } = config;
 
-export const isSupabaseConfigured = (): boolean => {
-  return !!(supabaseUrl && supabaseAnonKey);
-};
+const options: SupabaseClientOptions<"public"> = {};
+
+// Export a safe client.
+// If not configured, this will be null.
+// All API calls must check if (supabase) before using it.
+export const supabase: SupabaseClient | null = isSupabaseConfigured
+  ? createClient(supabaseConfig.url, supabaseConfig.anonKey, options)
+  : null;
+
+
+export type { Session, User };
