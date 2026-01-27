@@ -1,5 +1,3 @@
-// TODO: Refactor adminApi.ts to use these factory functions and eliminate 300+ lines of duplication
-
 import { supabase } from "@/supabase/client";
 import type { ApiError } from "@/types";
 
