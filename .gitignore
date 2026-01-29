@@ -45,3 +45,8 @@ public/worker-*.js.map
 .claude
 .claude-flow
 .mcp.json
+# Editor files
+.vscode/
+*.swp
+*.swo
+.idea/
