@@ -22,7 +22,7 @@ export const PerfectDayBadge = ({ habits }: { habits: Habit[] }) => {
   const isPerfect = completedTodayCount === totalActive;
 
   // Optional: Debugging (Uncomment to see why it might hide)
-
+  // console.log({ totalActive, completedTodayCount, todayStr });
 
   return (
     <AnimatePresence>

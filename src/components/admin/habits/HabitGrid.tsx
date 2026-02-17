@@ -11,7 +11,7 @@ import {
   TableCell,
 } from "@/components/ui/table";
 import HabitRow from "./HabitRow";
-import { useResponsiveDays } from "@/hooks/use-responsive-days";
+import { useResponsiveDays } from "@/hooks/use-responsive-days"; // Import our new hook
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 interface HabitGridProps {
