@@ -15,7 +15,7 @@ A developer portfolio template you can clone and launch in minutes. Works as a *
 
 ```bash
 # 1. Clone
-git clone https://github.com/YOUR_USERNAME/foliokit.git
+git clone https://github.com/akshay-bharadva/foliokit.git
 cd foliokit && npm install
 
 # 2. Configure - edit the single config file
